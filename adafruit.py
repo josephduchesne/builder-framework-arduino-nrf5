@@ -220,7 +220,7 @@ if isdir(sysview_path):
 
 usb_path = join(FRAMEWORK_DIR, "libraries", "Adafruit_TinyUSB_Arduino")
 if isdir(usb_path):
-    if env.subst("$BOARD") != "adafruit_feather_nrf52832":
+    if env.subst("$BOARD") != "adafruit_feather_nrf52832" and env.subst("$BOARD") != "bdb11_nrf52832":
         env.Append(
             CPPDEFINES=[
                 "USBCON",
